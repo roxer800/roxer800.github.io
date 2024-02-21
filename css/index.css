@@ -650,6 +650,11 @@
     }
 }
 @media(max-width:1020px){
+    .passive, .active{
+        font-size: 15px;
+        height: 40px;
+        padding-bottom: 15px;
+    }
     .right--side>h2{
         font-size: 24px;
     }
@@ -720,6 +725,11 @@
 }
 
 @media(max-width:865px){
+    .passive, .active{
+        font-size: 15px;
+        height: 40px;
+        padding-bottom: 15px;
+    }
     
     .card--body{
         margin: auto;
@@ -730,6 +740,11 @@
 }
 
 @media(max-width:815px){
+    .passive, .active{
+        font-size: 15px;
+        height: 40px;
+        padding-bottom: 15px;
+    }
     .first--check--question{
         margin-left: 6px;
     }
@@ -738,6 +753,11 @@
     }
 }
 @media(max-width:768px){
+    .passive, .active{
+        font-size: 15px;
+        height: 40px;
+        padding-bottom: 15px;
+    }
     .disable{
         display: none;
     }
