@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Booking.com: Hotels in batumi</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <script defer src="https://kit.fontawesome.com/ad136190dd.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container">
+                <div class="left--section">Booking.com</div>
+                <div class="right--section">
+                    <button class="currency">GEL</button>
+                    <button class="flag"><img src="images/Gb@3x.png" alt="flag image"></button>
+                    <button class="list--your--property">List your property</button>
+                    <button class="register">register</button>
+                    <button class="sign--in">Sign in</button>
+                    <p class="currency--selector">select your currency</p>
+                    <p class="language--selector">select your language</p>
+                </div>
+                <div class="right--section--toggle">
+                    <button class="user--icon--button"><i class="fa-regular fa-user user--icon"></i></button>
+                    <button class="bars--button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><i class="fa-solid fa-bars bars"></i></button>
+                    <p class="sign--in--selector">sign in</p>
+                    <div class="offcanvas offcanvas-bottom" style="height: 100vh;" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasBottomLabel">More</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body small ">
+                        <div class="offcanvas--selector offcanvas--selector"><p>GEL &nbsp; &nbsp; &nbsp; Georgian lari</p></div>
+                        <div class="offcanvas--selector offcanvas--selector"><p><img class="offcanvas--language--logo" src="images/Gb@3x.png" alt="flag image"> &nbsp; &nbsp; &nbsp; English</p></div>
+                        <div class="offcanvas--selector offcanvas--selector"><p><i class="fa-solid fa-g fa-xl"></i> &nbsp; &nbsp; &nbsp; Genius loyalty program</p></div>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-solid fa-house fa-xl"></i> &nbsp; &nbsp; &nbsp; List your property </div>
+                        <h5 class="offcanvas--title">Help and support</h5>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-solid fa-question fa-xl"></i> &nbsp; &nbsp; &nbsp; Contact Customer Service </div>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-regular fa-handshake fa-xl"></i>&nbsp; &nbsp; &nbsp; Partner dispute</div>
+                        <h5 class="offcanvas--title">inspiration</h5>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-solid fa-percent fa-xl"></i>  &nbsp; &nbsp; &nbsp; Seasonal and holiday deals</div>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-solid fa-book fa-xl"></i>  &nbsp; &nbsp; &nbsp; Travel articles</div>
+                        <h5 class="offcanvas--title">Settings and legal</h5>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-solid fa-i fa-xl"></i>  &nbsp; &nbsp; &nbsp; About Booking.com</div>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-solid fa-user fa-xl"></i> &nbsp; &nbsp; &nbsp; Careers</div>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-solid fa-check fa-xl"></i>  &nbsp; &nbsp; &nbsp; Become an affiliate</div>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-solid fa-newspaper fa-xl"></i>  &nbsp; &nbsp; &nbsp; Press center</div>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-solid fa-cookie-bite fa-xl"></i> &nbsp; &nbsp; &nbsp;Privacy & cookies</div>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-solid fa-newspaper fa-xl"></i>   &nbsp; &nbsp; &nbsp; Terms & conditions</div>
+                        <div class="offcanvas--selector offcanvas--selector"><i class="fa-solid fa-gavel fa-xl"></i>  &nbsp; &nbsp; &nbsp; Legal</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container ">
+                <div class="middle--section">
+                    <ul>
+                        <li class="active"><i class="fa-solid fa-bed"></i> stays</li>
+                        <li class="passive"><i class="fa-solid fa-plane"></i>Flights</li>
+                        <li class="passive"><i class="fa-solid fa-car"></i> car rentals</li>
+                        <li class="passive disable"><i class="fa-solid fa-child"></i> attractions</li>
+                        <li class="passive disable"><i class="fa-solid fa-taxi"></i> airport taxis</li>
+                        <div class="dropdown">
+                            <button class="btn-secondary dropdown-toggle dropdown--button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                            </button>
+                            <ul class="dropdown-menu  dropdown-menu-header ">
+                                <li class="dropdown-passive"><i class="fa-solid fa-child"></i> attractions</li>
+                                <li class="dropdown-passive"><i class="fa-solid fa-taxi"></i> airport taxis</li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container location--list">
+            <ul>
+                <li class="location--list--active">Home</li>
+                <i class="fa-solid fa-arrow-right"></i>
+                <li class="location--list--active">Georgia</li>
+                <i class="fa-solid fa-arrow-right"></i>
+                <li class="location--list--active">Ajara</li>
+                <i class="fa-solid fa-arrow-right"></i>
+                <li class="location--list--active">Batumi</li>
+                <i class="fa-solid fa-arrow-right"></i> 
+                <li class="location--list--passive">Search results</li>
+            </ul>
+        </div>
+        <div class="container-fluid container-xl">
+            <div class="row">
+                <div class="col col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 left--side">
+                <div class="mobile--left--side container-fluid">
+                    <div class="search-input" >
+                        <input type="search" placeholder="Search city" name="" id="">
+                        <div class="select--dates"><a href="search-page.html">Select Dates</a></div>
+                    </div>
+                </div>
+                <form class="form" action="">
+                    <h5>Search</h5>
+                    <p class="destination--p">Destination/property Name:</p>
+                    <input class="search--input" type="text"  placeholder="search city">
+                    <p class="destination--p">check-in date</p>
+                    <input type="date"  class="check">
+                    <p class="destination--p">check-out date</p>
+                    <input type="date"  class="check">
+                    <p class="destination--p">1-night stay</p>
+                    <div class="dropdown">
+                        <div class=" dropdown-toggle form--dropdown" >
+                        0 adults &#x2022 0 children &#x2022 0 room
+                        </div>
+                        <div class="dropdown-menu-form">
+                            <div class="dropdown--wrapper">
+                                <div class="dropdown-div">
+                                    <p>adults</p>
+                                    <div class="dropdown-buttons">
+                                        <button type="button" class="adults--minus minus--button">-</button>
+                                        <p class="adults--count">0</p>
+                                        <button type="button" class="adults--plus plus--button">+</button>
+                                    </div>
+                                </div>
+                                <div class="dropdown-div">
+                                    <p>Children</p>
+                                    <div class="dropdown-buttons">
+                                        <button type="button" class="minus--button children--minus">-</button>
+                                        <p class="children--count">0</p>
+                                        <button type="button" class="plus--button children--plus">+</button>
+                                    </div>
+                                </div>
+                                <div class="dropdown-div">
+                                    <p>Rooms</p>
+                                    <div class="dropdown-buttons">
+                                        <button type="button" class="minus--button rooms--minus">-</button>
+                                        <p class="rooms--count">0</p>
+                                        <button type="button" class="plus--button rooms--plus">+</button>
+                                    </div>
+                                </div>
+                                <button class="dropdown--submit">done</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label form--label" for="flexCheckDefault">
+                        Entire homes & apartaments
+                        </label>
+                        <i  class="fa-solid fa-question fa-md first--check--question"></i>
+                    </div>
+                    <p class="first--check--question--content"> We'll show you stays where you can have the <br> entire place to yourself </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label form--label " for="flexCheckDefault">
+                        I'm traveling for work
+                        </label>
+                        <i class="fa-solid fa-question fa-md second--check--question"></i>
+                    </div>
+                    <p class="second--check--question--content"> If you select this option, we'll show you popular <br>
+                                                                business travel features like breakfast, WiFi and <br> 
+                                                                free parking. </p>
+                <button class="form-search btn btn-primary">Search</button>
+                </form>
+                <div class="options container ">
+                    <h5>Filter by: </h5>
+                    <hr>
+                    <h6>your Previous Filters</h6>
+                    <div class="form-check d-flex justify-content-between font--size">
+                        <div>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                        Wheelchair accessible
+                            </label>
+                        </div>
+                        <label for="flexCheckDefault">&nbsp; &nbsp; &nbsp; 155</label>
+                    </div>
+                    <hr>
+                    <h6>Popular Filters</h6>
+                    <div class="first--section"></div>
+                    <hr>
+                    <h6>Facilities</h6>
+                    <div class="second--section"></div>
+                    <hr>
+                    <h6>Property Type</h6>
+                    <div class="third--section"></div>
+                    <hr>
+                    <h6>Property Rating</h6>
+                    <div class="fourth--section"></div>
+                    <hr>
+                    <h6> review Score  </h6> 
+                    <div class="fifth--section"></div>
+                    <hr>
+                    <h6>Distance from center of Batumi</h6>
+                    <div class="sixth--section"></div>
+                    <hr>
+                    <h6>Fun Things To Do</h6>
+                    <div class="seventh--section"></div>
+                    <hr>
+                    <h6>brands</h6>
+                    <div class="eighth--section"></div>
+                    </div>
+                    <div class="map" id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95438.84120050806!2d41.57019308902602!3d41.62410560412117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406786304ea2d221%3A0x7a3053a9e12ea967!2sBatumi!5e0!3m2!1sen!2sge!4v1708293800284!5m2!1sen!2sge" 
+                        width="100%" height="198" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col right--side">
+                    <h2> Batumi : 2,931 properties found</h2>
+                    <div class="dropdown right--side--dropdown">
+                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            sort by: Our Top Picks
+                            </button>
+                            <ul class="dropdown-menu right--side--dropdown--menu">
+                            <li><a class="dropdown-item" href="#">Our top picks</a></li>
+                            <li><a class="dropdown-item" href="#">Homes & apartments first</a></li>
+                            <li><a class="dropdown-item" href="#">Property rating (high to low)</a></li>
+                            <li><a class="dropdown-item" href="#">Property rating (low to high)</a></li>
+                            <li><a class="dropdown-item" href="#">Distance from downtown</a></li>
+                            <li><a class="dropdown-item" href="#">Top reviewed</a></li>
+                            <li><a class="dropdown-item" href="#">Distance from closest beach</a></li>
+                            </ul>
+                    </div>
+                    <div class="card--section"></div>
+                    <p>Batumi: 2941 properties found</p>
+                    <div class="page--count">
+                        <div class="page--count--left--side">
+                            <i class="fa-solid fa-arrow-left page--count--arrow--left"></i>
+                            <div class="page--count--number"><a href="">1</a></div>
+                            <div class="page--count--number"><a href="">2</a></div>
+                            <div class="page--count--number"><a href="">3</a></div>
+                            <div class="page--count--number"><a href="">4</a></div>
+                            <div class="page--count--number"><p>...</p></div>
+                            <div class="page--count--number"><a href="">39</a></div>
+                            <div class="page--count--number"><a href="">40</a></div>
+                            <i class="fa-solid fa-arrow-right page--count--arrow--right"></i>
+                        </div>
+                        <div class="page--count--right--side">showing 1 - 25</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer--first--section">
+                <button>List your property</button>
+                <div class="links">
+                    <a href="">Mobile version</a>
+                    <a href="">Your account</a>
+                    <a href="">Make changes to your booking online</a>
+                    <a href="">Customer service help</a>
+                    <a href="">Become an affiliate</a>
+                    <a href="">Booking.com for business</a>
+                </div>
+            </div>
+            <div class="container footer--second--section ">
+                <div class="row">
+                    <div class="col footer--second--section--col">
+                        <p><a href="">Countries</a> </p>
+                        <p><a href="">regions</a> </p>
+                        <p><a href="">cities</a> </p>
+                        <p><a href="">districts</a> </p>
+                        <p><a href="">airports</a> </p>
+                    </div>
+                    <div class="col footer--second--section--col">
+                        <p><a href="">homes</a></p>
+                        <p><a href="">apartments</a></p>
+                        <p><a href="">resorts</a></p>
+                        <p><a href="">villas</a></p>
+                        <p><a href="">hostels</a></p>
+                    </div>
+                    <div class="col footer--second--section--col">
+                        <p><a href="">unique places to stay</a> </p>
+                        <p><a href="">reviews</a> </p>
+                        <p><a href="">discover monthly stays</a> </p>
+                        <p><a href="">seasonal and holiday deals</a> </p>
+                        <p><a href="">traveller review awards</a> </p>
+                    </div>
+                    <div class="col footer--second--section--col">
+                        <p><a href="">about booking.com</a> </p>
+                        <p><a href="">customer service help</a> </p>
+                        <p><a href="">partner help</a> </p>
+                        <p><a href="">careers</a> </p>
+                        <p><a href="">sustainability</a> </p>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">copyright 1996-2024 booking.com. all rights reserved</p>
+        </footer>
+
+
+
+
+
+        <script type="module" src="javascript/index.js"></script>
+        <script src="javascript/form.js"></script>
+        <script type="module" src="javascript/card-section.js"></script>
+    </body>
+</html>
