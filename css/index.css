@@ -773,12 +773,22 @@
 
 }
 @media(max-width:610px){
+    .btn--close{
+        position: absolute;
+        right: 100px;
+        top: 80px;
+    }
+    .dropdown--button{
+        font-size: 10px;
+    }
     .passive, .active{
-        font-size: 15px;
+        font-size: 10px;
         height: 40px;
         padding-bottom: 15px;
     }
-    
+    .location--list--passive{
+        font-size: 10px;
+    }
     .form--label{
         font-size: 11px;
     }
