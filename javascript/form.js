@@ -16,6 +16,17 @@ let adultsCount = 0
 let childrenCount = 0
 let roomsCount = 0
 
+
+
+
+
+
+
+
+
+
+
+
 dropdownButton.addEventListener('click', () => {
     dropdownId = !dropdownId
     dropdownDiv.style.display = dropdownId? 'block' : 'none'
@@ -111,3 +122,128 @@ const secondCheckQuestionContent = document.querySelector('.second--check--quest
         secondCheckQuestionContent.style.display = 'none'
     })
 
+    mobiscroll.datepicker('#inline-picker', {
+        controls: ['calendar'],
+        select:'range',
+        display: 'inline',
+        pages:2,
+        showRangeLabels: false,
+        touchUi: false,
+        
+    });
+    
+    
+    const checkOutDateCalendar = document.querySelector('.check--out--date--calendar');
+    const checkInDateCalendar = document.querySelector('.check--in--date--calendar');
+
+
+    
+
+    
+    
+
+
+
+    const calendarPicker = document.querySelector('.calendar--picker');
+    const flexible = document.querySelector('.flexible')
+    const flexiblePicker = document.querySelector('.flexible--picker')
+    const flexibleFooter = document.querySelector('.flexible--footer')
+    const calendar = document.querySelector('.calendar')
+    const calendarDayPickerDiv = document.querySelector('.calendar--day--picker--div')
+
+
+    
+    calendarPicker.addEventListener('click',() => {
+        if(calendar.style.display = 'none')  {
+            flexiblePicker.style.display = 'none'
+            flexibleFooter.style.display = 'none'
+            calendar.style.display = 'block'
+            calendarDayPickerDiv.style.display = 'flex'
+            calendarPicker.style.color = '#006ce4'
+            flexible.style.color = 'grey'
+        }
+    })
+    flexible.addEventListener('click',() => {
+        if(flexiblePicker.style.display = 'none')  {
+            calendar.style.display = 'none'
+            calendarDayPickerDiv.style.display = 'none'
+            flexiblePicker.style.display = 'block'
+            flexibleFooter.style.display = 'flex'
+            calendarPicker.style.color = 'grey'
+            flexible.style.color = '#006ce4'
+        }
+    })
+    
+    const calendarPicker2 = document.querySelector('.calendar--picker2');
+    const flexible2 = document.querySelector('.flexible2')
+    const flexiblePicker2 = document.querySelector('.flexible--picker2')
+    const flexibleFooter2 = document.querySelector('.flexible--footer2')
+    const calendar2 = document.querySelector('.calendar2')
+    const calendarDayPickerDiv2 = document.querySelector('.calendar--day--picker--div2')
+
+    
+    calendarPicker2.addEventListener('click',() => {
+        if(calendar2.style.display = 'none')  {
+            flexiblePicker2.style.display = 'none'
+            flexibleFooter2.style.display = 'none'
+            calendar2.style.display = 'block'
+            calendarDayPickerDiv2.style.display = 'flex'
+            calendarPicker2.style.color = '#006ce4'
+            flexible2.style.color = 'grey'
+        }
+    })
+    flexible2.addEventListener('click',() => {
+        if(flexiblePicker2.style.display = 'none')  {
+            calendar2.style.display = 'none'
+            calendarDayPickerDiv2.style.display = 'none'
+            flexiblePicker2.style.display = 'block'
+            flexibleFooter2.style.display = 'flex'
+            calendarPicker2.style.color = 'grey'
+            flexible2.style.color = '#006ce4'
+        }
+    })
+
+
+    
+    window.onload = () => {
+        const hideDiv = document.getElementById("myDiv")
+        const hideDiv2 = document.getElementById("check--in--date")
+    
+        document.onclick = (div) => {
+            if(div.target.id !== 'myDiv' && div.target.id !== 'myDiv2' && div.target.id !== 'sSPIWPJS'
+            && div.target.id !== 'sSPIWPJS1' && div.target.id !== 'sSPIWPJS2' && div.target.id !== 'sSPIWPJS3' && div.target.id !== 'sSPIWPJS4'
+            && div.target.id !== 'sSPIWPJS5' && div.target.id !== 'sSPIWPJS6' && div.target.id !== 'sSPIWPJS7' && div.target.id !== 'sSPIWPJS8'
+            && div.target.id !== 'sSPIWPJS9' && div.target.id !== 'sSPIWPJS10' && div.target.id !== 'sSPIWPJS11' && div.target.id !== 'sSPIWPJS12'
+            && div.target.id !== 'sSPIWPJS13' && div.target.id !== 'sSPIWPJS14' && div.target.id !== 'sSPIWPJS15' && div.target.id !== 'sSPIWPJS16'
+            && div.target.id !== 'sSPIWPJS17' && div.target.id !== 'sSPIWPJS18' && div.target.id !== 'sSPIWPJS19' && div.target.id !== 'sSPIWPJS20'){
+                hideDiv.style.display = 'none'
+                dropdownId = !dropdownId
+            }
+            
+            
+    }
+    }
+
+    function toggleDiv(id) {
+        document.querySelectorAll(".check--in--date--calendar").forEach((div) => {
+        if (div.id == id) {
+            div.style.display = div.style.display == "none" ? "block" : "none";
+        } else {
+            div.style.display = "none";
+        }
+        });
+        
+    }
+    function hideOnClickOutside(divId) {
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('#' + divId).length) {
+                $('#' + divId).fadeOut();
+            }
+        });
+    
+        $('#' + divId).on('click', function(event){
+            event.stopPropagation(); // Prevent event bubbling
+        });
+    }
+    hideOnClickOutside('checkInDate')
+    

@@ -2,15 +2,21 @@ import {card} from '../javascript/cart.js';
 
 let cardHtml = ''
 
-console.log(card)
+
+
+
+
 
 card.forEach((cardProduct)=>{
+
+
     cardHtml += `
     <div class="card mb-3" >
     <div class="row g-0">
         <div class="col-md-4 col-sm-3 col-3">
             <img src="${cardProduct.image}" class=" img-fluid img--fluid" alt="...">
         </div>
+        <div class="heart--wrapper">${cardProduct.heartIcon}</div>
         <div class=" col-md-6 col-sm-7  col-7 card--body">
             <div class=" card-body ">
             <h5 class="card-title card--title">${cardProduct.name}</h5>
@@ -38,3 +44,4 @@ card.forEach((cardProduct)=>{
 })
 
 document.querySelector('.card--section').innerHTML = cardHtml
+

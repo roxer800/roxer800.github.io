@@ -4,6 +4,9 @@ const currencySelector = document.querySelector('.currency--selector')
 const languageSelector = document.querySelector('.language--selector')
 const userIconButton = document.querySelector('.user--icon--button')
 const signInSelector = document.querySelector('.sign--in--selector')
+const questionMark = document.querySelector('.question--mark')
+const questionMarkSelector = document.querySelector('.question--mark--selector')
+
 
 
 
@@ -26,4 +29,11 @@ export function navbarFunction() {
     userIconButton.addEventListener('mouseout', () => {
         signInSelector.style.display = 'none'
     })
+    questionMark.addEventListener('mouseover', () => {
+        questionMarkSelector.style.display = 'block'
+    })
+    questionMark.addEventListener('mouseout', () => {
+        questionMarkSelector.style.display = 'none'
+    })
+
 }

@@ -8,6 +8,7 @@
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script defer src="https://kit.fontawesome.com/ad136190dd.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/index.css">
+        <link href="css/mobiscroll.javascript.min.css" rel="stylesheet"/>
     </head>
     <body>
         <nav class="navbar">
@@ -16,11 +17,13 @@
                 <div class="right--section">
                     <button class="currency">GEL</button>
                     <button class="flag"><img src="images/Gb@3x.png" alt="flag image"></button>
+                    <button class="question--mark"><i class="fa-solid fa-question"></i></button>
                     <button class="list--your--property">List your property</button>
                     <button class="register">register</button>
                     <button class="sign--in">Sign in</button>
                     <p class="currency--selector">select your currency</p>
                     <p class="language--selector">select your language</p>
+                    <p class="question--mark--selector">contact customer service</p>
                 </div>
                 <div class="right--section--toggle">
                     <button class="user--icon--button"><i class="fa-regular fa-user user--icon"></i></button>
@@ -102,41 +105,163 @@
                     <p class="destination--p">Destination/property Name:</p>
                     <input class="search--input" type="text"  placeholder="search city">
                     <p class="destination--p">check-in date</p>
-                    <input type="date"  class="check">
+                    <p class="check--in--date" id="button1" onclick="toggleDiv('checkInDate')">check in date</p>
+                    <div id="checkInDate" class="check--in--date--calendar " style="display: none;">
+                        <div id="sZONE5O31" class="check--in--page--picker"  >
+                            <button id="sZONE5O32" type="button"  class="calendar--picker">Calendar</button>
+                            <button id="sZONE5O33" type="button"  class="flexible">I am flexible</button>
+                        </div>
+                        <hr id="sZONE5O34" class="divider">
+                        <div id="sZONE5O35" class="flexible--picker">
+                            <h6 id="sZONE5O36">How long do you want to stay?</h6>
+                            <div id="sZONE5O37" class="flexible--radio--buttons">
+                                <div id="sZONE5O38" class="form-check form--check--flexible">
+                                        <input  class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label id="sZONE5O310" class="form-check-label" for="flexRadioDefault1">
+                                        A weekend
+                                        </label>
+                                    </div>
+                                    <div id="sZONE5O311" class="form-check form--check--flexible">
+                                        <input  class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                        <label id="sZONE5O313" class="form-check-label" for="flexRadioDefault1">
+                                        A week
+                                        </label>
+                                    </div>
+                                    <div id="sZONE5O314" class="form-check form--check--flexible">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                        <label id="sZONE5O316" class="form-check-label" for="flexRadioDefault1">
+                                        A month
+                                        </label>
+                                    </div>
+                                    <div id="sZONE5O317" class="form-check form--check--flexible">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                                        <label id="sZONE5O319" class="form-check-label" for="flexRadioDefault1">
+                                        other
+                                        </label>
+                                    </div>
+                            </div>
+                            <h6 id="sZONE5O320"> when do you want to go?</h6>
+                            <p id="sZONE5O322">select up to 3 month</p>
+                            <div id="sZONE5O323" class="month--picker">
+                                <button id="sZONE5O324" type="button" class="month--picker--month"> <i  id="sZONE5O324111" class="fa-regular fa-calendar"></i> <p id="sZONE5O3246" >Feb</p> 2024</button>
+                                <button id="sZONE5O325" type="button" class="month--picker--month"> <i  id="sZONE5O3241" class="fa-regular fa-calendar"></i> <p id="sZONE5O3247" >Mar</p> 2024</button>
+                                <button id="sZONE5O326" type="button" class="month--picker--month"> <i  id="sZONE5O3242" class="fa-regular fa-calendar"></i> <p id="sZONE5O3248" >Apr</p> 2024</button>
+                                <button id="sZONE5O327" type="button" class="month--picker--month"> <i  id="sZONE5O3243" class="fa-regular fa-calendar"></i> <p id="sZONE5O3249" >May</p> 2024</button>
+                                <button id="sZONE5O328" type="button" class="month--picker--month"> <i  id="sZONE5O3244" class="fa-regular fa-calendar"></i> <p id="sZONE5O32410" >Jun</p> 2024</button>
+                                <button id="sZONE5O329" type="button" class="month--picker--month"> <i  id="sZONE5O3245" class="fa-regular fa-calendar"></i> <p id="sZONE5O32411" >Jul</p> 2024</button>
+                            </div>
+                        </div>
+                        <div id="sZONE5O330" class="calendar">
+                            <div class="" id="inline-picker"></div>
+                        </div>
+                        <hr id="sZONE5O331">
+                        <div id="sZONE5O332" class="flexible--footer">
+                            <p id="sZONE5O333">Select days and months</p>
+                            <button id="sZONE5O334" type="button" class="btn btn-secondary" disabled >Select dates</button>
+                        </div>
+                        <div id="sZONE5O335" class="calendar--day--picker--div">
+                            <button id="sZONE5O336" type="button"  class="active--calendar--day--picker"> Exact dates</button>
+                            <button id="sZONE5O337" type="button"  class="calendar--day--picker"> <i id="sZONE5O3364" class="fa-solid fa-plus-minus"></i> 1 day</button>
+                            <button id="sZONE5O338" type="button"  class="calendar--day--picker"> <i id="sZONE5O331" class="fa-solid fa-plus-minus"></i> 2 days</button>
+                            <button id="sZONE5O339" type="button" class="calendar--day--picker"> <i id="sZONE5O3362" class="fa-solid fa-plus-minus"></i> 3 days</button>
+                            <button id="sZONE5O340" type="button"  class="calendar--day--picker"> <i id="sZONE5O3363" class="fa-solid fa-plus-minus"></i>  7 days</button>
+                        </div>
+                    </div>
                     <p class="destination--p">check-out date</p>
-                    <input type="date"  class="check">
+                    <p class="check--out--date" id="button2" onclick="toggleDiv('check--out--date')">check out date</p>
+                    <div id="check--out--date" class="check--out--date--calendar Check--in--body" style="display: none;">
+                        <div class="check--in--page--picker">
+                            <button type="button"  class="calendar--picker calendar--picker2">Calendar</button>
+                            <button type="button"  class="flexible flexible2">I am flexible</button>
+                        </div>
+                        <hr class="divider">
+                        <div class="flexible--picker flexible--picker2">
+                            <h6>How long do you want to stay?</h6>
+                            <div class="flexible--radio--buttons">
+                                <div class="form-check form--check--flexible">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                        A weekend
+                                        </label>
+                                    </div>
+                                    <div class="form-check form--check--flexible">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                        A week
+                                        </label>
+                                    </div>
+                                    <div class="form-check form--check--flexible">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                        A month
+                                        </label>
+                                    </div>
+                                    <div class="form-check form--check--flexible">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                        other
+                                        </label>
+                                    </div>
+                            </div>
+                            <h6> when do you want to go?</h6>
+                            <p>select up to 3 month</p>
+                            <div class="month--picker">
+                                <button type="button" class="month--picker--month"> <i class="fa-regular fa-calendar"></i> <p>Feb</p> 2024</button>
+                                <button type="button" class="month--picker--month"> <i class="fa-regular fa-calendar"></i> <p>Mar</p> 2024</button>
+                                <button type="button" class="month--picker--month"> <i class="fa-regular fa-calendar"></i> <p>Apr</p> 2024</button>
+                                <button type="button" class="month--picker--month"> <i class="fa-regular fa-calendar"></i> <p>May</p> 2024</button>
+                                <button type="button" class="month--picker--month"> <i class="fa-regular fa-calendar"></i> <p>Jun</p> 2024</button>
+                                <button type="button" class="month--picker--month"> <i class="fa-regular fa-calendar"></i> <p>Jul</p> 2024</button>
+                            </div>
+                        </div>
+                        <div class="calendar calendar2">
+                            <div class="" id="inline-picker"></div>
+                        </div>
+                        <hr>
+                        <div class="flexible--footer flexible--footer2">
+                            <p>Select days and months</p>
+                            <button type="button" class="btn btn-secondary" disabled >Select dates</button>
+                        </div>
+                        <div class="calendar--day--picker--div calendar--day--picker--div2">
+                            <button type="button"  class="active--calendar--day--picker"> Exact dates</button>
+                            <button type="button"  class="calendar--day--picker"> <i class="fa-solid fa-plus-minus"></i> 1 day</button>
+                            <button type="button"  class="calendar--day--picker"> <i class="fa-solid fa-plus-minus"></i> 2 days</button>
+                            <button type="button" class="calendar--day--picker"> <i class="fa-solid fa-plus-minus"></i> 3 days</button>
+                            <button type="button"  class="calendar--day--picker"> <i class="fa-solid fa-plus-minus"></i>  7 days</button>
+                        </div>
+                    </div>
                     <p class="destination--p">1-night stay</p>
-                    <div class="dropdown">
-                        <div class=" dropdown-toggle form--dropdown" >
+                    <div class="dropdown" id="sSPIWPJS">
+                        <div class=" dropdown-toggle form--dropdown" id="myDiv2"  >
                         0 adults &#x2022 0 children &#x2022 0 room
                         </div>
-                        <div class="dropdown-menu-form">
-                            <div class="dropdown--wrapper">
-                                <div class="dropdown-div">
-                                    <p>adults</p>
-                                    <div class="dropdown-buttons">
-                                        <button type="button" class="adults--minus minus--button">-</button>
-                                        <p class="adults--count">0</p>
-                                        <button type="button" class="adults--plus plus--button">+</button>
+                        <div class="dropdown-menu-form" id="myDiv" >
+                            <div class="dropdown--wrapper" id="sSPIWPJS1">
+                                <div class="dropdown-div" id="sSPIWPJS2">
+                                    <p id="sSPIWPJS3">adults</p>
+                                    <div class="dropdown-buttons" id="sSPIWPJS4">
+                                        <button id="sSPIWPJS5" type="button" class="adults--minus minus--button" id="dropdown-menu-form2">-</button>
+                                        <p id="sSPIWPJS6" class="adults--count">0</p>
+                                        <button id="sSPIWPJS7" type="button" class="adults--plus plus--button">+</button>
                                     </div>
                                 </div>
-                                <div class="dropdown-div">
-                                    <p>Children</p>
-                                    <div class="dropdown-buttons">
-                                        <button type="button" class="minus--button children--minus">-</button>
-                                        <p class="children--count">0</p>
-                                        <button type="button" class="plus--button children--plus">+</button>
+                                <div class="dropdown-div" id="sSPIWPJS8">
+                                    <p id="sSPIWPJS9">Children</p>
+                                    <div id="sSPIWPJS10" class="dropdown-buttons">
+                                        <button id="sSPIWPJS11" type="button" class="minus--button children--minus">-</button>
+                                        <p id="sSPIWPJS12" class="children--count">0</p>
+                                        <button id="sSPIWPJS13" type="button" class="plus--button children--plus">+</button>
                                     </div>
                                 </div>
-                                <div class="dropdown-div">
-                                    <p>Rooms</p>
-                                    <div class="dropdown-buttons">
-                                        <button type="button" class="minus--button rooms--minus">-</button>
-                                        <p class="rooms--count">0</p>
-                                        <button type="button" class="plus--button rooms--plus">+</button>
+                                <div id="sSPIWPJS14" class="dropdown-div">
+                                    <p id="sSPIWPJS15">Rooms</p>
+                                    <div id="sSPIWPJS16" class="dropdown-buttons">
+                                        <button id="sSPIWPJS17" type="button" class="minus--button rooms--minus">-</button>
+                                        <p id="sSPIWPJS18" class="rooms--count">0</p>
+                                        <button id="sSPIWPJS19" type="button" class="plus--button rooms--plus">+</button>
                                     </div>
                                 </div>
-                                <button class="dropdown--submit">done</button>
+                                <button id="sSPIWPJS20" class="dropdown--submit">done</button>
                             </div>
                             
                         </div>
@@ -205,7 +330,14 @@
                     </div>
                 </div>
                 <div class="col right--side">
-                    <h2> Batumi : 2,931 properties found</h2>
+                    <div class="header--wrapper">
+                        <h2 class="header--name"> Batumi : 2,931 properties found</h2>
+                        <div class="map2" id="map2">
+                        <div class="map--button--wrapper">
+                            <button class="btn btn-primary ">Show on map</button>
+                        </div>
+                    </div>
+                    </div>
                     <div class="dropdown right--side--dropdown">
                             <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             sort by: Our Top Picks
@@ -288,11 +420,11 @@
         </footer>
 
 
-
-
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="javascript/mobiscroll.javascript.min.js"></script>
         <script type="module" src="javascript/index.js"></script>
         <script src="javascript/form.js"></script>
         <script type="module" src="javascript/card-section.js"></script>
+        
     </body>
 </html>
