@@ -1,5 +1,5 @@
 import {navbarFunction} from '../javascript/navbar.js'
-import {firstSection,secondSection,thirdSection,fourthSection,fifthSection,sixthSection,seventhSection,eighthSection} from '../javascript/radioButtons.js'
+import {firstSection,secondSection,thirdSection,fourthSection,fifthSection,sixthSection,seventhSection,eighthSection,thirdSectionAddition} from '../javascript/radioButtons.js'
 
 navbarFunction()
 
@@ -60,7 +60,10 @@ thirdSection.forEach((thirdSectionProduct) => {
     `
 })
 
+
+
 document.querySelector('.third--section').innerHTML = thirdSectionHtml
+    
 
 fourthSection.forEach((fourthSectionProduct) => {
     fourthSectionHtml +=`
@@ -145,3 +148,55 @@ document.querySelector('.eighth--section').innerHTML = eighthSectionHtml
 
 
 
+const moreButton = document.querySelector('.more--button')
+const arrow = document.getElementById('options--arrow')
+let hasBeenCalled = false;
+
+moreButton.addEventListener('click', () => {
+    if (!hasBeenCalled) {
+        showElement()
+        arrow.classList.replace('fa-arrow-down', 'fa-arrow-up')
+        hasBeenCalled = true;
+        } else {
+            removeElement()
+            arrow.classList.replace('fa-arrow-up','fa-arrow-down')
+            addElement()
+            hasBeenCalled = false;
+        }
+    
+})
+
+let secondSectionHtmlAddition = ''
+
+function showElement(){
+        thirdSectionAddition.forEach((thirdSectionAdditonProduct)=>{
+
+            secondSectionHtmlAddition +=`
+            <div class="form-check d-flex justify-content-between font--size ">
+            <div>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                ${thirdSectionAdditonProduct.name}
+                </label>
+            </div>
+            <label for="flexCheckDefault">&nbsp; &nbsp; &nbsp; ${thirdSectionAdditonProduct.count}</label>
+            </div>
+            `
+        })
+    
+    document.querySelector('.addition').innerHTML = secondSectionHtmlAddition
+
+    secondSectionHtmlAddition=''
+    
+    }
+    
+function removeElement(){
+    const elementToRemove = document.querySelector('.addition')
+    elementToRemove.remove()
+}
+function addElement(){
+const newDiv = document.createElement('div');
+newDiv.className = 'addition';
+newDiv.id = 'addition2';
+document.querySelector(".addition--parent").appendChild(newDiv)
+}

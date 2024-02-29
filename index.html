@@ -2,13 +2,13 @@
 <html>
     <head>
         <title>Booking.com: Hotels in batumi</title>
-        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script defer src="https://kit.fontawesome.com/ad136190dd.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/index.css">
         <link href="css/mobiscroll.javascript.min.css" rel="stylesheet"/>
+        
     </head>
     <body>
         <nav class="navbar">
@@ -95,9 +95,117 @@
             <div class="row">
                 <div class="col col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-12 col-12 left--side">
                 <div class="mobile--left--side container-fluid">
-                    <div class="search-input" >
-                        <input type="search" placeholder="Search city" name="" id="">
-                        <div class="select--dates"><a href="search-page.html">Select Dates</a></div>
+                    <div class="mobile--left--side--wrapper">
+                        <div class="search--input--mobile" >
+                            <input type="search" placeholder="Search city" name="" id="">
+                        </div>
+                        <div class="check--in--mobile">
+                        <div class="check--in--date--mobile" id="check--in--button">
+                            <p class="check--in--date--mobile--header">check-in date</p>
+                            <p class="select--date--mobile">select date</p>
+                        </div>
+                        <div class="check--out--date--mobile " id="check--out--button">
+                            <p class="check--in--date--mobile--header ">check-out date</p>
+                            <p class="select--date--mobile">select date</p>
+                        </div>
+                        </div>
+                        <div class="mobile--calendar">
+                            <div id="range"></div>
+                        </div>
+                        <div class="mobile--person--counter">
+                            <div class="mobile--adults mobile--picker" data-bs-toggle="dropdown" aria-expanded="false">
+                                <p class="mobile--person--counter--header">adults</p>
+                                <div class="dropdown">
+                                    <button class=" dropdown-toggle mobile--person--counter--button" type="button">
+                                        0
+                                        </button>
+                                        <ul class="dropdown-menu dropdown--menu">
+                                        <li><a class="dropdown-item" href="#">1</a></li> <li><a class="dropdown-item" href="#">2</a></li>
+                                        <li><a class="dropdown-item" href="#">3</a></li> <li><a class="dropdown-item" href="#">4</a></li>
+                                        <li><a class="dropdown-item" href="#">5</a></li> <li><a class="dropdown-item" href="#">6</a></li>
+                                        <li><a class="dropdown-item" href="#">7</a></li> <li><a class="dropdown-item" href="#">8</a></li>
+                                        <li><a class="dropdown-item" href="#">9</a></li> <li><a class="dropdown-item" href="#">10</a></li>
+                                        <li><a class="dropdown-item" href="#">11</a></li> <li><a class="dropdown-item" href="#">12</a></li>
+                                        <li><a class="dropdown-item" href="#">13</a></li> <li><a class="dropdown-item" href="#">14</a></li>
+                                        <li><a class="dropdown-item" href="#">15</a></li>
+                                        </ul>
+                                    </div>
+                            </div>
+                            <div class="mobile--children mobile--picker" data-bs-toggle="dropdown" aria-expanded="false">
+                                <p class="mobile--person--counter--header">children</p>
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle mobile--person--counter--button" type="button">
+                                        0
+                                        </button>
+                                        <ul class="dropdown-menu dropdown--menu">
+                                        <li><a class="dropdown-item" href="#">1</a></li> <li><a class="dropdown-item" href="#">2</a></li>
+                                        <li><a class="dropdown-item" href="#">3</a></li> <li><a class="dropdown-item" href="#">4</a></li>
+                                        <li><a class="dropdown-item" href="#">5</a></li> <li><a class="dropdown-item" href="#">6</a></li>
+                                        <li><a class="dropdown-item" href="#">7</a></li> <li><a class="dropdown-item" href="#">8</a></li>
+                                        <li><a class="dropdown-item" href="#">9</a></li> <li><a class="dropdown-item" href="#">10</a></li>
+                                        <li><a class="dropdown-item" href="#">11</a></li> <li><a class="dropdown-item" href="#">12</a></li>
+                                        <li><a class="dropdown-item" href="#">13</a></li> <li><a class="dropdown-item" href="#">14</a></li>
+                                        <li><a class="dropdown-item" href="#">15</a></li>
+                                        </ul>
+                                    </div>
+                            </div>
+                            <div class="mobile--rooms mobile--picker" data-bs-toggle="dropdown" aria-expanded="false">
+                                <p class="mobile--person--counter--header">rooms</p>
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle mobile--person--counter--button" type="button">
+                                        0
+                                        </button>
+                                        <ul class="dropdown-menu dropdown--menu">
+                                        <li><a class="dropdown-item" href="#">1</a></li> <li><a class="dropdown-item" href="#">2</a></li>
+                                        <li><a class="dropdown-item" href="#">3</a></li> <li><a class="dropdown-item" href="#">4</a></li>
+                                        <li><a class="dropdown-item" href="#">5</a></li> <li><a class="dropdown-item" href="#">6</a></li>
+                                        <li><a class="dropdown-item" href="#">7</a></li> <li><a class="dropdown-item" href="#">8</a></li>
+                                        <li><a class="dropdown-item" href="#">9</a></li> <li><a class="dropdown-item" href="#">10</a></li>
+                                        <li><a class="dropdown-item" href="#">11</a></li> <li><a class="dropdown-item" href="#">12</a></li>
+                                        <li><a class="dropdown-item" href="#">13</a></li> <li><a class="dropdown-item" href="#">14</a></li>
+                                        <li><a class="dropdown-item" href="#">15</a></li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="mobile--radio--question--header">
+                            <div class="mobile--radio--question">
+                                <div class="mobile--question" data-bs-toggle="collapse" href="#collapseExample">
+                                    <p>
+                                        <a class="mobile--question--text" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            Are you traveling for work?
+                                        </a>
+                                    </p>
+                                    <div class="mobile--radio--question--question--mark">
+                                        <i class="fa-solid fa-question fa-2xs" style="color:white" ></i>
+                                    </div>
+                                </div>
+                                <div class="collapse btn-xs" id="collapseExample">
+                                        <div class="card card-body  collapse--mobile ">
+                                            if you are traveling for work, we will sort the most popular <br>
+                                            business travel features to the top of the filter menu so <br>
+                                            you can find them faster.
+                                        </div>
+                                </div>
+                                <div class="mobile--question--check--wrapper">
+                                    <div class="form-check mobile--question--check check-active">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check mobile--question--check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            no
+                                            </label>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn--mobile--wrapper">
+                            <button class="btn btn-primary btn--mobile ">Search</button>
+                        </div>
                     </div>
                 </div>
                 <form class="form" action="">
@@ -305,6 +413,8 @@
                     <hr>
                     <h6>Facilities</h6>
                     <div class="second--section"></div>
+                    <div class="addition--parent"><div class="addition" id="addition2"></div></div>
+                    <button class=" more--button"  >show more <i id="options--arrow" class="fa-solid fa-arrow-down fa-xs"></i></button>
                     <hr>
                     <h6>Property Type</h6>
                     <div class="third--section"></div>

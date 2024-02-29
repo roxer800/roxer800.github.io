@@ -223,27 +223,99 @@ const secondCheckQuestionContent = document.querySelector('.second--check--quest
             
     }
     }
+    let value = 0;
 
     function toggleDiv(id) {
-        document.querySelectorAll(".check--in--date--calendar").forEach((div) => {
-        if (div.id == id) {
-            div.style.display = div.style.display == "none" ? "block" : "none";
+        const div = document.getElementById(id);
+        if (div.style.display == "none") {
+            div.style.display = "block";
+            setTimeout(() => {
+                value = 1;
+                console.log(value);
+            }, 20);
         } else {
             div.style.display = "none";
+            value = 0;
+            console.log(value);
         }
-        });
-        
     }
-    function hideOnClickOutside(divId) {
-        $(document).on('click', function(event) {
-            if (!$(event.target).closest('#' + divId).length) {
-                $('#' + divId).fadeOut();
+    
+    function hideOnClickOutside(divIds) {
+        document.addEventListener('click', (event)=> {
+            if (value == 1) {
+                const target = event.target;
+                const isInsideAnyDiv = divIds.some((divId) => {
+                    const div = document.getElementById(divId);
+                    return div.contains(target);
+                });
+                if (!isInsideAnyDiv) {
+                    divIds.forEach((divId) => {
+                        const div = document.getElementById(divId);
+                        div.style.display = "none";
+                    });
+                    value = 0;
+                    console.log(value);
+                }
             }
         });
-    
-        $('#' + divId).on('click', function(event){
-            event.stopPropagation(); // Prevent event bubbling
-        });
     }
-    hideOnClickOutside('checkInDate')
     
+    hideOnClickOutside(['checkInDate', 'check--out--date']);
+
+
+
+    const checkInDateMobile = document.querySelector('.check--in--date--mobile')
+    const checkOutDateMobile = document.querySelector('.check--out--date--mobile')
+    const mobileCalendar = document.querySelector('.mobile--calendar')
+
+
+    let checkInValue = 0
+
+    function checkInFunction() {
+        checkInDateMobile.addEventListener('click',()=>{
+            if(checkInValue !==1){
+                checkInValue = 1
+                mobileCalendar.style.display = 'block'
+                
+            } else if(checkInValue === 1){
+                checkInValue = 0
+                mobileCalendar.style.display = 'none'
+            }
+            colorChange()
+        })
+        checkOutDateMobile.addEventListener('click',()=>{
+            if(checkInValue !==2){
+                checkInValue = 2
+                mobileCalendar.style.display = 'block'
+            } else if(checkInValue === 2){
+                checkInValue = 0
+                mobileCalendar.style.display = 'none'
+            }
+            colorChange()
+        })
+        
+    }
+    
+    checkInFunction()
+    
+
+
+    function colorChange(){
+        if(checkInValue === 0 ){
+            checkInDateMobile.style.backgroundColor = 'white'
+            checkOutDateMobile.style.backgroundColor = 'white'
+        } else if(checkInValue === 1){
+            checkInDateMobile.style.backgroundColor = 'yellow'
+            checkOutDateMobile.style.backgroundColor = 'white'
+        } else if(checkInValue === 2){
+            checkInDateMobile.style.backgroundColor = 'white'
+            checkOutDateMobile.style.backgroundColor = 'yellow'
+        }
+    }
+
+
+    mobiscroll.datepicker('#range', {
+        select: 'range',
+        display: 'inline',
+        showRangeLabels: false,
+    });

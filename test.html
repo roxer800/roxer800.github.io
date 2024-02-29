@@ -20,8 +20,8 @@
     </head>
     <body>
 
-        <div class="test-start">
-            <div class="" id="inline-picker"></div>
+        <div>
+            <div id="range"></div>
         </div>
         
         
@@ -31,127 +31,11 @@
             
         </script>
         <script>
-            mobiscroll.datepicker('#inline-picker', {
-    controls: ['calendar'],
-    select:'range',
-    display: 'inline',
-    pages:2,
-    showRangeLabels: false,
-    touchUi: false,
-    
+mobiscroll.datepicker('#range', {
+    select: 'range',
+    display: 'inline'
 });
-       mobiscroll.datepicker('#mobi-picker', {
-    controls: ['calendar'],
-    select:'range',
-    pages: 2,
-    touchUi: false,
-    showRangeLabels: false,
-    theme: 'windows',
-});
-
         </script>
         
     </body>
 </html>
-
-
-const checkInDate = document.querySelector('.check--in--date');
-    const checkOutDate = document.querySelector('.check--out--date');
-    const checkOutDateCalendar = document.querySelector('.check--out--date--calendar');
-    const checkInDateCalendar = document.querySelector('.check--in--date--calendar');
-
-
-    if(checkInDateCalendar.style.display ='block'){
-        checkOutDateCalendar.style.display = 'none'
-    } else if(checkOutDateCalendar.style.display = 'block'){
-        checkInDateCalendar.style.display = 'none'
-    }
-
-    
-    let checkInId = true
-    let checkOutId = true
-    
-    checkInDate.addEventListener('click', () => {
-        checkInId = !checkInId
-        checkInDateCalendar.style.display = checkInId? 'none' : 'block'
-    })
-
-    checkOutDate.addEventListener('click', () => {
-        checkOutId = !checkOutId
-        checkOutDateCalendar.style.display = checkOutId? 'none' : 'block'
-    })
-
-
-
-    const body = document.querySelector('body')
-    body.addEventListener('click',()=>{
-        dropdownDiv.style.display = 'none'
-    })
-
-
-
-    if(div.target.id !== 'check--in--date' && div.target.id !== 'button1'
-            && div.target.id !== 'sZONE5O31'
-            && div.target.id !== 'sZONE5O32'
-            && div.target.id !== 'sZONE5O33'
-            && div.target.id !== 'sZONE5O34'
-            && div.target.id !== 'sZONE5O35'
-            && div.target.id !== 'sZONE5O36'
-            && div.target.id !== 'sZONE5O37'
-            && div.target.id !== 'sZONE5O38'
-            && div.target.id !== 'flexRadioDefault1'
-            && div.target.id !== 'sZONE5O310'
-            && div.target.id !== 'sZONE5O311'
-            && div.target.id !== 'flexRadioDefault2'
-            && div.target.id !== 'sZONE5O313'
-            && div.target.id !== 'sZONE5O314'
-            && div.target.id !== 'flexRadioDefault3'
-            && div.target.id !== 'sZONE5O316'
-            && div.target.id !== 'sZONE5O317'
-            && div.target.id !== 'flexRadioDefault4'
-            && div.target.id !== 'sZONE5O319'
-            && div.target.id !== 'sZONE5O320'
-            && div.target.id !== 'sZONE5O322'
-            && div.target.id !== 'sZONE5O323'
-            && div.target.id !== 'sZONE5O324'
-            && div.target.id !== 'sZONE5O325'
-            && div.target.id !== 'sZONE5O326'
-            && div.target.id !== 'sZONE5O327'
-            && div.target.id !== 'sZONE5O328'
-            && div.target.id !== 'sZONE5O329'
-            && div.target.id !== 'sZONE5O330'
-            && div.target.id !== 'sZONE5O331'
-            && div.target.id !== 'sZONE5O332'
-            && div.target.id !== 'sZONE5O333'
-            && div.target.id !== 'sZONE5O334'
-            && div.target.id !== 'sZONE5O335'
-            && div.target.id !== 'sZONE5O336'
-            && div.target.id !== 'sZONE5O337'
-            && div.target.id !== 'sZONE5O338'
-            && div.target.id !== 'sZONE5O339'
-            && div.target.id !== 'sZONE5O340'
-            && div.target.id !== 'inline-picker'
-            && div.target.id !== 'sZONE5O324111'
-            && div.target.id !== 'sZONE5O3241'
-            && div.target.id !== 'sZONE5O3242'
-            && div.target.id !== 'sZONE5O3243'
-            && div.target.id !== 'sZONE5O3244'
-            && div.target.id !== 'sZONE5O3245'
-            && div.target.id !== 'sZONE5O3246'
-            && div.target.id !== 'sZONE5O3247'
-            && div.target.id !== 'sZONE5O3248'
-            && div.target.id !== 'sZONE5O3249'
-            && div.target.id !== 'sZONE5O32410'
-            && div.target.id !== 'sZONE5O32411'
-            && div.target.id !== 'sZONE5O3361'
-            && div.target.id !== 'sZONE5O3362'
-            && div.target.id !== 'sZONE5O3363'
-            && div.target.id !== 'sZONE5O3364'
-
-
-            
-            
-            
-            ){
-                hideDiv2.style.display = 'none'
-            }

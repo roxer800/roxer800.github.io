@@ -184,3 +184,39 @@ export const eighthSection = [
         count: "1"
     },
 ]
+
+export const thirdSectionAddition = [
+    {
+        name: "Wheelchair accessible",
+        count: "155"
+    },
+    {
+        name: "Old boulevard",
+        count: "194"
+    },
+    {
+        name: "Resorts",
+        count: "13"
+    },
+    {
+        name: "wheelchair accessible",
+        count: "135"
+    },
+    {
+        name: "Bicycle rental",
+        count: "581"
+    },
+    {
+        name: "Family rooms",
+        count: "1507"
+    },
+    {
+        name: "Beachfront",
+        count: "1291"
+    },
+    {
+        name: "Bed and breakfest",
+        count: "9"
+    }
+
+]

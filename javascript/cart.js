@@ -1,6 +1,9 @@
+
+
+
 export const  card = [
     {
-    heartIcon:`<i class="fa-regular fa-heart"></i>`,
+    heartIcon:`<i class="fa-solid fa-heart heart" style="color:#1E3050;"></i>`,
     heart:false,
     image: "https://picsum.photos/seed/picsum/200",
     name: "HOTEL ORBI CITY DOWNTOWN FOR BATUMI",
@@ -181,3 +184,6 @@ export const  card = [
         description:"A recently renovated aparthotel in Batumi and within 600 metres of Batumi Beach, Apartment from batumi features a private beach area, comfortable allergy-free rooms and free WiFi.",
     },
 ]
+
+
+
