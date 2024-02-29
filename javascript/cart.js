@@ -7,7 +7,7 @@ export const  card = [
     heart:false,
     image: "https://picsum.photos/seed/picsum/200",
     name: "HOTEL ORBI CITY DOWNTOWN FOR BATUMI",
-    rating:"very good",
+    rating:"good",
     ratingNumber:"8.4",
     review:"332",
     location:"new boulevard, batumi",
